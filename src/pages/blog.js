@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => {
                         </div>
                         <div className="post-list__content">
                             <h2>{post.node.frontmatter.title}</h2>
-                            {post.node.frontmatter.tags? (
+                            {post.node.frontmatter.tags ? (
                                 <div className="tags-container">
                                     <ul className="taglist">
                                         {post.node.frontmatter.tags.map(tag => (
