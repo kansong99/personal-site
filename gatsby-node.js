@@ -21,8 +21,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const postTemplate = path.resolve('src/templates/postTemplate.js');
   const tagTemplate = path.resolve('src/templates/tagTemplate.js');
-
-  return graphql(`
+  const result = await graphql(`
   {
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___date] }
@@ -40,7 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   }
-  `).then(result => {
+  `)
     if(result.errors) {
       return Promise.reject(result.errors);
     }
@@ -58,7 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
     // pulled directly from https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
-    _.each(post, edge => {
+    _.each(posts, edge => {
       if (_.get(edge, 'node.frontmatter.tags')) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
@@ -75,6 +74,5 @@ exports.createPages = async ({ actions, graphql }) => {
         },
       });
     });
-  });
 };
 

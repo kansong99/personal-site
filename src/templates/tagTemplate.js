@@ -14,7 +14,7 @@ const Tags = ({ pageContext, data }) => {
        <h1>{tagHeader}</h1>
        <ul>
          {edges.map(({ node }) => {
-           const {title, data } = node.frontmatter;
+           const {title, date } = node.frontmatter;
            const { slug } = node.fields;
            return (
              <li key={slug}>
