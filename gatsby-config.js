@@ -6,6 +6,12 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-transformer-json`,
+    {resolve: `gatsby-source-filesystem`,
+  options: {
+    path: `${__dirname}/src/data`,
+  },
+},
     `gatsby-plugin-sass`,
     {resolve: `gatsby-transformer-remark`,
   options: {
