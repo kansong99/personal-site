@@ -40,12 +40,12 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
+          <p>kaansong1[at]gmail[dot]com</p>
           <p>
           © {new Date().getFullYear()} &middot; Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
           </p>
-          <p>kaansong1[at]gmail[dot]com</p>
         </footer>
       </div>
     </>

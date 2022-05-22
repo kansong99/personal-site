@@ -1,0 +1,40 @@
+[
+    {
+      "medium": "Books",
+      "mostRecent": "2022-05",
+      "description":
+        "Most recent books I've read",
+      "thumbnailImage": "../images/projects/cat-1.jpeg",
+      "members": [
+          {
+              "title": "Beyond Sexuality",
+              "author": "Tim Dean",
+              "dateCompleted": "2022-05-22" 
+          },
+          {
+              "title": "The Color Purple",
+              "author": "Alice Walker",
+              "dateCompleted": "2022-05-12"
+          }
+      ]
+    },
+    {
+        "medium": "Movies",
+        "mostRecent": "2022-04",
+        "description":
+          "Most recent movies I've watched",
+        "thumbnailImage": "../images/projects/cat-1.jpeg",
+        "members": [
+            {
+                "title": "Everything, Everywhere, All at Once",
+                "author": "Daniels",
+                "dateCompleted": "2022-04-10" 
+            },
+            {
+                "title": "Todo sobre mi madre",
+                "author": "Pedro Almodóvar",
+                "dateCompleted": "2022-03-12"
+            }
+        ]
+      }
+  ]
