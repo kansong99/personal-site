@@ -1,0 +1,15 @@
+.index{
+    margin: 0;
+    display: flex;
+    &__photo {
+        align-self: right;
+        margin-left: 4rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        width: 235px;
+        left: 25%;
+    }
+    &__blurb {
+        align-self: left;
+    }
+}
