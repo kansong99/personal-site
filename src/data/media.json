@@ -1,0 +1,74 @@
+[
+    {
+      "medium": "Books",
+      "mostRecent": "05/22",
+      "description":
+        "Most recent books I've read",
+      "thumbnailImage": "/images/beyond_sexuality.jpg",
+      "members": [
+          {
+              "title": "Beyond Sexuality",
+              "author": "Tim Dean",
+              "dateCompleted": "2022-05-22" 
+          },
+          {
+              "title": "The Color Purple",
+              "author": "Alice Walker",
+              "dateCompleted": "2022-05-12"
+          },
+          {
+            "title": "The Cancer Journals",
+            "author": "Audre Lorde",
+            "dateCompleted": "2022-05-11"
+        }
+      ]
+    },
+    {
+        "medium": "Essays/Short Stories",
+        "mostRecent": "05/22",
+        "description":
+          "Most recent Essays I've read",
+        "thumbnailImage": "/images/is_the_rectum.jpeg",
+        "members": [
+            {
+                "title": "Is the Rectum a Grave",
+                "author": "Leo Bersani",
+                "dateCompleted": "Still reading" 
+            },
+            {
+                "title": "When Plague Ends",
+                "author": "Andrew Sullivan",
+                "dateCompleted": "2022-05-20"
+            },
+            {
+                "title": "Aliens",
+                "author": "David Leavitt",
+                "dateCompleted": "2022-05-20"
+            }
+        ]
+      },
+    {
+        "medium": "Movies",
+        "mostRecent": "04/22",
+        "description":
+          "Most recent movies I've watched",
+        "thumbnailImage": "/images/everything_everywhere.jpeg",
+        "members": [
+            {
+                "title": "Everything, Everywhere, All at Once",
+                "author": "Daniels",
+                "dateCompleted": "2022-04-10" 
+            },
+            {
+                "title": "Todo sobre mi madre",
+                "author": "Pedro Almodóvar",
+                "dateCompleted": "2022-03-12"
+            },
+            {
+                "title": "Deep Water",
+                "author": "Adrian Lyne",
+                "dateCompleted": "2022-04-12"
+            }
+        ]
+      }
+  ]

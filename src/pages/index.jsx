@@ -19,7 +19,7 @@ const IndexPage = () => (
       </div>
       <div className="index__blurb">
         <p>
-       Hello, my name is Kofi Ansong. I am 23 years old, and currently work as a software engineer at  <a href={`https://www.promise-pay.com/`}>Promise-Pay</a>.</p>
+       Hello, my name is Kofi Ansong. I am 23 years old, and currently work as a software engineer at  <a className="link" href={`https://www.promise-pay.com/`}>Promise-Pay</a>.</p>
        <p>Outside of work, I like exercising, roller skating, and writing. </p>
       </div>
 
