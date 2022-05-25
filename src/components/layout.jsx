@@ -17,9 +17,6 @@ import '../styles/styles.scss';
 const darkTheme = createTheme({
   palette: {
     type: "dark",
-    background: {
-      pearl: '#eae0c8'
-    }
   }
 })
 
