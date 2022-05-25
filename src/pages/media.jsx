@@ -24,9 +24,9 @@ const MediaPage  = ({ data }) => {
     <Layout>
        <h2 className={classes.mediaTitle}>Media I've recently consumed</h2>
        <div className='media-list'>
-           <Grid justify="center" container className={classes.gridContainer} spacing={4}>
-                {data.allMediaJson.edges.map(media => (
-                <Grid item className={classes.gridItem}>  
+           <Grid justifyContent="center" container className={classes.gridContainer} spacing={4}>
+                {data.allMediaJson.edges.map((media, id) => (
+                <Grid item key={id} className={classes.gridItem}>  
                     <SiteCard key={media.node.medium} 
                     mostRecent={media.node.mostRecent} 
                     medium={media.node.medium} 

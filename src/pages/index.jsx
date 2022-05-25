@@ -15,7 +15,7 @@ const IndexPage = () => (
         width={230}
         quality={95}
         alt=""
-        deaggable={true}/>
+        draggable={true}/>
       </div>
       <div className="index__blurb">
         <p>

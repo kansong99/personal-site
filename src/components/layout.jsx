@@ -16,7 +16,7 @@ import '../styles/styles.scss';
 
 const darkTheme = createTheme({
   palette: {
-    type: "dark"
+    type: "dark",
   }
 })
 
@@ -35,11 +35,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <ThemeProvider theme={darkTheme}
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
+       
       >
         <CssBaseline/>
         <main>{children}</main>

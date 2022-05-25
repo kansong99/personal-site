@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { green } from '@material-ui/core/colors';
 import {Avatar, Card, CardContent, CardHeader, CardMedia, Typography} from '@material-ui/core';
-
+import { amber } from '@material-ui/core/colors';
 const useStyles = makeStyles({
     root: {
         minWidth: 200,
@@ -10,6 +9,9 @@ const useStyles = makeStyles({
     media: {
         height: 300,
     },
+    avatar: {
+        backgroundColor: amber[500],
+    }
 });
 
 export default function SiteCard({
@@ -21,7 +23,7 @@ export default function SiteCard({
     <Card className={classes.root} variant="outlined">
         <CardHeader
             avatar={
-                <Avatar sx={{bgcolor: green[500]}} aria-label="medium">
+                <Avatar className={classes.avatar} aria-label="medium">
                     {medium.charAt(0)}
                 </Avatar>
             }
