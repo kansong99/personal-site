@@ -8,17 +8,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { createTheme, ThemeProvider} from "@material-ui/core";
-import { CssBaseline } from "@material-ui/core";
 
 import Header from "./header"
 import '../styles/styles.scss';
 
-const darkTheme = createTheme({
-  palette: {
-    type: "dark",
-  }
-})
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,10 +27,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <ThemeProvider theme={darkTheme}
-       
-      >
-        <CssBaseline/>
         <main>{children}</main>
         <footer
           style={{
@@ -52,7 +41,6 @@ const Layout = ({ children }) => {
           <a className="link" href="https://www.gatsbyjs.com">Gatsby</a>
           </p>
         </footer>
-      </ThemeProvider>
     </>
   )
 }
