@@ -2,8 +2,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import SiteCard from '../components/siteCard'
-import { Grid } from '@material-ui/core';
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles({
     mediaTitle: {

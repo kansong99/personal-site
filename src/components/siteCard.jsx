@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import {Avatar, Card, CardContent, CardHeader, CardMedia, Typography} from '@material-ui/core';
-import { amber } from '@material-ui/core/colors';
+import makeStyles from '@mui/styles/makeStyles';
+import {Avatar, Card, CardContent, CardHeader, CardMedia, Typography} from '@mui/material';
+import { amber } from '@mui/material/colors';
 const useStyles = makeStyles({
     root: {
         minWidth: 200,
