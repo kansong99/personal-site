@@ -1,23 +1,25 @@
 import React from 'react';
-import { createTheme, ThemeProvider} from "@material-ui/core";
-import { CssBaseline } from "@material-ui/core";
+import { createTheme, ThemeProvider, StyledEngineProvider, adaptV4Theme } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 
 export const myContext = React.createContext();
 
-const darkTheme = createTheme({
+const darkTheme = createTheme(adaptV4Theme({
     palette: {
-      type: "dark",
+      mode: "dark",
     }
-  })
+  }))
 
 const Provider = props => {
 
   return (
-    <ThemeProvider theme={darkTheme}>
-         <CssBaseline/>
-      {props.children}
-      </ThemeProvider>
-  )
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={darkTheme}>
+           <CssBaseline/>
+        {props.children}
+        </ThemeProvider>
+    </StyledEngineProvider>
+  );
 };
 
 export default ({element}) => 
