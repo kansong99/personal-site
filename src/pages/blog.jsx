@@ -6,8 +6,12 @@ import Layout from '../components/layout';
 import { GatsbyImage}  from 'gatsby-plugin-image';
 const BlogPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
+    const LIVE = 0;
     return (
-        <Layout>
+        LIVE === 0 ? (<Layout>
+            <div >Coming soon...</div>
+        </Layout>) : 
+       <Layout>
             <div className="post-list">
                 {posts.map(post => (
                     <div key={post.node.id} className="post-list__item">
