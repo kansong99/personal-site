@@ -9,22 +9,10 @@ const useStyles = makeStyles({
         minWidth: 200,
     },
     media: {
-        height: 300,
-        width: 300,
+        height: 250,
+        width: 250,
     },
 });
-
-
-/**    {
-      "title": "Stylelex",
-      "date": "03-2021",
-      "description": "A prototype for a tool that applies in-house styleguides to text. Built with Flask and React",
-      "url": "https://stylelex-api-heroku.herokuapp.com/",
-      "github": "https://github.com/kansong99/stylelex",
-      "status": "inactive",
-      "thumbnailImage": "../images/projects/stylelex.jpeg"
-    } */
-
 
 export default function ProjectCard({
    title, description, github, status, image, url,  

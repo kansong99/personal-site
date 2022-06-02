@@ -2,7 +2,7 @@
     {
       "title": "Preface Portal",
       "date": "06-2021",
-      "description": "For Preface Project, a non-profit aiming to boost literacy for underpriviled elementary schoolers by pairing them with high school reading buddies. I built with some friends a CRM, that allows high schoolers to log their meetings with their students, and provides teachers and the non-profit oversight over student progress",  
+      "description": "Preface Project is a non-profit aiming to boost literacy for underpriviled elementary schoolers by pairing them with high school reading buddies. Preface Portal is a CRM that allows high schoolers to log their meetings with their students, and provides teachers and the non-profit oversight over student progress",  
       "url": " https://drive.google.com/file/d/1nF6TNrs5PcMEGKNDJZaBvaS3YG3eG3JX/view?usp=sharing",
       "github": "https://github.com/prefaceproject",
       "status": "active",
@@ -11,7 +11,7 @@
     {
       "title": "Stylelex",
       "date": "03-2021",
-      "description": "A prototype for a tool that applies in-house styleguides to text. Built with Flask and React",
+      "description": "A tool that applies in-house styleguides to text. Built with Flask and React",
       "url": "https://stylelex-api-heroku.herokuapp.com/",
       "github": "https://github.com/kansong99/stylelex",
       "status": "inactive",

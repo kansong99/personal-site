@@ -20,30 +20,6 @@ const useStyles = makeStyles({
     },
 })
 
-// const MediaPage  = ({ data }) => {
-//     const classes = useStyles();
-//     return (
-//     <Layout>
-//        <h2 className={classes.mediaTitle}>Media I've recently consumed</h2>
-//        <div className='media-list'>
-//            <Grid justifyContent="center" container className={classes.gridContainer} spacing={4}>
-//                 {data.allMediaJson.edges.map((media, id) => (
-//                 <Grid item key={id} className={classes.gridItem}>  
-//                     <SiteCard key={media.node.medium} 
-//                     mostRecent={media.node.mostRecent} 
-//                     medium={media.node.medium} 
-//                     image={media.node.thumbnailImage} 
-//                     members={media.node.members}/> 
-//                 </Grid>))}
-//            </Grid>
-//        </div>
-
-//     </Layout>
-
-//                 )}
-
-// export default MediaPage;
-
 
 const ProjectsPage = ({ data }) => {
         const classes = useStyles();
@@ -57,7 +33,7 @@ const ProjectsPage = ({ data }) => {
             <div className="project-list">
             <Grid justifyContent="center" container className={classes.gridContainer} spacing={4}>
                 {data.allProjectsJson.edges.map((project, id) => (
-                    <Grid item key={id} className={classes.gridItem}>  
+                    <Grid xs={12} item key={id} className={classes.gridItem}>  
                     <ProjectCard
                     title={project.node.title}
                     status={project.node.status}  
