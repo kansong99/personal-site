@@ -1,18 +1,20 @@
 [
     {
-      "title": "My First Project",
-      "date": "2018-08",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum repudiandae, autem eos voluptatum assumenda cum laborum iure nam in accusantium.",
-      "url": "https://google.com",
-      "thumbnailImage": "../images/projects/cat-1.jpeg"
+      "title": "Preface Portal",
+      "date": "06-2021",
+      "description": "Preface Project is a non-profit aiming to boost literacy for underpriviled elementary schoolers by pairing them with high school reading buddies. Preface Portal is a CRM that allows high schoolers to log their meetings with their students, and provides teachers and the non-profit oversight over student progress",  
+      "url": " https://drive.google.com/file/d/1nF6TNrs5PcMEGKNDJZaBvaS3YG3eG3JX/view?usp=sharing",
+      "github": "https://github.com/prefaceproject",
+      "status": "active",
+      "thumbnailImage": "/images/preface.jpeg"
     },
     {
-      "title": "My Second Project",
-      "date": "2018-09",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum repudiandae, autem eos voluptatum assumenda cum laborum iure nam in accusantium.",
-      "url": "https://google.com",
-      "thumbnailImage": "../images/projects/cat-2.jpeg"
+      "title": "Stylelex",
+      "date": "03-2021",
+      "description": "A tool that applies in-house styleguides to text. Built with Flask and React",
+      "url": "https://stylelex-api-heroku.herokuapp.com/",
+      "github": "https://github.com/kansong99/stylelex",
+      "status": "inactive",
+      "thumbnailImage": "/images/stylelex.jpeg"
     }
   ]
