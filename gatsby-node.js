@@ -1,50 +1,7 @@
 const _ = require('lodash');
 const path = require('path');
-const media = require('./src/data/media.json');
-//const projects = require('./src/data/projects.json');
 const {createFilePath} = require('gatsby-source-filesystem');
 
-
-exports.sourceNodes = async ({actions, createNodeId, createContentDigest}) => {
-  media.forEach((card) => {
-
-    const {medium, mostRecent, description, image, members } = card;
-
-    const {name, ext} = path.parse(image);
-    const absolutePath = path.resolve(__dirname, image);
-
-    const data = {
-      name,
-      ext,
-      absolutePath,
-      extension: ext.substring(1),
-    }
-
-    const imageNode = {
-      ...data,
-      id: createNodeId(`mediaCard-image-${name}`),
-      children: [],
-      internal: {
-        type: 'MediaCardImage',
-        contentDigest: createContentDigest(data),
-      }
-    };
-
-    actions.createNode(imageNode);
- 
-    const node = {
-      medium, mostRecent, description, members,
-      image: imageNode,
-       id: createNodeId(`card-${medium}`),
-       internal: {
-         type: 'MediaCard',
-         contentDigest: createContentDigest(card),
-       } 
-    };
-
-    actions.createNode(node);
-  })
-};
 
 exports.onCreateNode = ({ node, actions, getNode}) => {
   const { createNodeField } = actions;
