@@ -6,7 +6,7 @@
       "url": " https://drive.google.com/file/d/1nF6TNrs5PcMEGKNDJZaBvaS3YG3eG3JX/view?usp=sharing",
       "github": "https://github.com/prefaceproject",
       "status": "active",
-      "thumbnailImage": "/images/preface.jpeg"
+      "thumbnailImage": "../images/preface.jpeg"
     },
     {
       "title": "Stylelex",
@@ -15,6 +15,6 @@
       "url": "https://stylelex-api-heroku.herokuapp.com/",
       "github": "https://github.com/kansong99/stylelex",
       "status": "inactive",
-      "thumbnailImage": "/images/stylelex.jpeg"
+      "thumbnailImage": "../images/stylelex.jpeg"
     }
   ]

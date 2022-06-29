@@ -4,7 +4,7 @@
       "mostRecent": "05/22",
       "description":
         "Most recent books I've read",
-      "thumbnailImage": "/images/beyond_sexuality.jpg",
+      "image": "../images/beyond_sexuality.jpeg",
       "members": [
           {
               "title": "Beyond Sexuality",
@@ -28,7 +28,7 @@
         "mostRecent": "05/22",
         "description":
           "Most recent Essays I've read",
-        "thumbnailImage": "/images/is_the_rectum.jpeg",
+        "image": "../images/is_the_rectum.jpeg",
         "members": [
             {
                 "title": "Is the Rectum a Grave",
@@ -52,7 +52,7 @@
         "mostRecent": "04/22",
         "description":
           "Most recent movies I've watched",
-        "thumbnailImage": "/images/everything_everywhere.jpeg",
+        "image": "../images/everything_everywhere.jpeg",
         "members": [
             {
                 "title": "Everything, Everywhere, All at Once",

@@ -30,7 +30,7 @@ const MediaPage  = ({ data }) => {
                     <SiteCard key={media.node.medium} 
                     mostRecent={media.node.mostRecent} 
                     medium={media.node.medium} 
-                    image={media.node.thumbnailImage} 
+                    image={media.node.image.childImageSharp.gatsbyImageData} 
                     members={media.node.members}/> 
                 </Grid>))}
            </Grid>
@@ -50,7 +50,11 @@ query {
                 medium
                 mostRecent
                 description
-                thumbnailImage 
+                image {
+                    childImageSharp {
+                      gatsbyImageData(height: 270)
+                      }
+                } 
                 members {
                     title
                     author

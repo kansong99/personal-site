@@ -39,7 +39,7 @@ const ProjectsPage = ({ data }) => {
                     status={project.node.status}  
                     github={project.node.github} 
                     url={project.node.url} 
-                    image={project.node.thumbnailImage} 
+                    image={project.node.thumbnailImage.childImageSharp.gatsbyImageData} 
                     description={project.node.description}/> 
                 </Grid>))}
                 </Grid>
@@ -62,7 +62,12 @@ query {
                 url
                 github
                 status
-                thumbnailImage
+                thumbnailImage {
+                    childImageSharp {
+                        gatsbyImageData(height: 270)
+                    
+                  } 
+                }
             }
         }
     }
