@@ -1,8 +1,8 @@
 import React from 'react';
 import makeStyles from '@mui/styles/makeStyles';
 import { Card, CardActions, CardContent, CardHeader, CardMedia, Typography} from '@mui/material';
-import { amber } from '@mui/material/colors';
 import Button from '@mui/material/Button';
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const useStyles = makeStyles({
     root: {
@@ -25,12 +25,7 @@ export default function ProjectCard({
             title={title}
             subheader={ status}
             />
-        <CardMedia
-        className={classes.media}
-        component="img"
-        src=
-        { image}
-        />
+         <GatsbyImage image={image} alt={"hello"}/>
         <CardContent>
                 <Typography variant="body2" color="textSecondary">
                     {description}
