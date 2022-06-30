@@ -29,7 +29,7 @@ const ProjectsPage = ({ data }) => {
             title="Home"
             keywords={['gatsby', 'application', 'react', 'portfolio']}
             />
-            <h1 className={classes.projectTitle}>Projects</h1>
+            <h3 className={classes.projectTitle}>Projects</h3>
             <div className="project-list">
             <Grid justifyContent="center" container className={classes.gridContainer} spacing={4}>
                 {data.allProjectsJson.edges.map((project, id) => (

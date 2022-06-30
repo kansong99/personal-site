@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
           style={{
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
+            marginLeft: 60
           }}
         >
           <p>kaansong1[at]gmail[dot]com</p>
