@@ -6,12 +6,12 @@ import '../styles/styles.scss';
 const Header = ({ siteTitle }) => (
   <header>
     <div className="header_logo">
-      <h1>
+      <h3>
       <Link className="link"
       to="/">
       {siteTitle}
     </Link>
-      </h1>
+      </h3>
     </div>
     <nav>
       <Link className="link" to="/blog">Blog</Link>

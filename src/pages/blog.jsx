@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
     const LIVE = 0;
     return (
         LIVE === 0 ? (<Layout>
-            <div >Coming soon...</div>
+            <div style={{marginLeft: 60}}>Coming soon...</div>
         </Layout>) : 
        <Layout>
             <div className="post-list">

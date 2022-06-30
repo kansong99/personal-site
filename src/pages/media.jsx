@@ -22,7 +22,7 @@ const MediaPage  = ({ data }) => {
     const classes = useStyles();
     return (
     <Layout>
-       <h2 className={classes.mediaTitle}>Media I've recently consumed</h2>
+       <h3 className={classes.mediaTitle}>Media I am consuming</h3>
        <div className='media-list'>
            <Grid justifyContent="center" container className={classes.gridContainer} spacing={4}>
                 {data.allMediaJson.edges.map((media, id) => (

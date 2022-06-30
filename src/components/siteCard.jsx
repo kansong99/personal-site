@@ -32,7 +32,7 @@ export default function SiteCard({
             title={medium}
             subheader={`Most recently completed: ${mostRecent}`}
             />
-        <GatsbyImage image={image} alt={"hello"} height={270} />
+        <div style={{ justifyContent: "center", display: "flex" }}><GatsbyImage image={image} alt={"hello"} height={270} /></div>
         <CardContent>
             {members.map(member =>(
                 <Typography key={member.title} variant="body2" color="textSecondary">
