@@ -1,0 +1,36 @@
+#___gatsby {
+    height: 100vh;
+}
+
+#gatsby-focus-wrapper{
+    height: 100vh;
+}
+
+
+
+
+body {
+    height: 100vh;
+    margin:0;  
+    margin:0;  
+  }
+
+header{ min-height:50px; }
+footer{ min-height:50px; }
+
+
+/* Trick */
+body{ 
+    display:flex; 
+    flex-direction:column; 
+  }
+  
+main {
+    flex: 1
+} 
+  
+
+footer{
+    margin-top:auto; 
+}
+
