@@ -25,7 +25,7 @@ export default function ProjectCard({
             title={title}
             subheader={ status}
             />
-        <div style={{ justifyContent: "center", display: "flex" }}><GatsbyImage image={image} alt={"hello"}/></div>
+        <div style={{ justifyContent: "center", display: "flex" }}><GatsbyImage image={image} alt={"project still"}/></div>
         <CardContent>
                 <Typography variant="body2" color="textSecondary">
                     {description}

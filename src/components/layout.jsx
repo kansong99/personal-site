@@ -27,20 +27,16 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
+        <main
+          >{children}</main>
         <footer
           style={{
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
-            marginLeft: 60
+            marginLeft: 60,
           }}
         >
-          <p>kaansong1[at]gmail[dot]com</p>
-          <p>
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a className="link" href="https://www.gatsbyjs.com">Gatsby</a>
-          </p>
+          Connect with me on <a className="link" href={`https://www.linkedin.com/in/kofi-ansong-89294016a/`}>linkedin</a>, <a className="link" href={`https://github.com/kansong99`}>github</a>, or email me at kaansong1[at]gmail[dot]com!
         </footer>
     </>
   )
