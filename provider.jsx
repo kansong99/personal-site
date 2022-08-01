@@ -4,9 +4,9 @@ import { CssBaseline } from "@mui/material";
 
 export const myContext = React.createContext();
 
-const darkTheme = createTheme(adaptV4Theme({
+const lightTheme = createTheme(adaptV4Theme({
     palette: {
-      mode: "dark",
+      mode: "light",
     }
   }))
 
@@ -14,7 +14,7 @@ const Provider = props => {
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={lightTheme}>
            <CssBaseline/>
         {props.children}
         </ThemeProvider>

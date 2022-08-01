@@ -3,27 +3,48 @@ import { kebabCase } from 'lodash';
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
-import { GatsbyImage}  from 'gatsby-plugin-image';
+import makeStyles from '@mui/styles/makeStyles';
+
+// import { GatsbyImage}  from 'gatsby-plugin-image';
+const useStyles = makeStyles({
+    projectTitle: {
+        flexGrow: 1,
+        textAlign: 'center',
+        color:  '#ff840096',
+        
+    },
+    postListContent: {
+        display: "flex",
+    flexDirection: "row",
+    },
+    postListContent: {
+        padding: "1rem",
+        textAlign: "left",
+    },
+})
+
+
+
+
+
+
 const BlogPage = ({ data }) => {
+    const classes = useStyles();
     const posts = data.allMarkdownRemark.edges;
-    const LIVE = 0;
     return (
-        LIVE === 0 ? (<Layout>
-            <div style={{marginLeft: 60}}>Coming soon...</div>
-        </Layout>) : 
        <Layout>
             <div className="post-list">
                 {posts.map(post => (
-                    <div key={post.node.id} className="post-list__item">
-                        <div className="post-list__thumbnail">
+                    <div key={post.node.id} className={classes.postListItem}>
+                        {/* <div className="post-list__thumbnail">
                             <Link to={post.node.fields.slug}>
                                 <GatsbyImage
                                 image={post.node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} alt="a cat"
                                 />
                             </Link>
-                        </div>
-                        <div className="post-list__content">
-                            <h2>{post.node.frontmatter.title}</h2>
+                        </div> */}
+                        <div className={classes.postListContent}>
+                            <h2 style={{color:"#ff840096"}}>{post.node.frontmatter.title}</h2>
                             {post.node.frontmatter.tags ? (
                                 <div className="tags-container">
                                     <ul className="taglist">
@@ -63,13 +84,10 @@ query{
                     date(formatString: "MMMM DD, YYYY")
                     title
                     tags
-                    thumbnail {
-                        childImageSharp { gatsbyImageData(width:90)
-                        }
+                   
                     }
                 }
             }
         }
     }
-}
 `;

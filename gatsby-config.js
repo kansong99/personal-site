@@ -1,40 +1,41 @@
-const path = require('path');
+const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `ka`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `Kofi Ansong's personal site`,
+    author: `Kofi Ansong`,
+    siteUrl: `https://kofiansong.com//`,
   },
   plugins: [
     `gatsby-plugin-material-ui`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
-    {resolve: `gatsby-source-filesystem`,
-  options: {
-    path: `${__dirname}/src/data`,
-   
-  },
-},
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+      },
+    },
     `gatsby-plugin-sass`,
-    {resolve: `gatsby-transformer-remark`,
-  options: {
-    plugins: [
-      {
-        resolve: `gatsby-remark-images`,
-        options: {
-          maxWidth: 200,
-        }
-      }
-    ]
-  }
-},
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'markdown-pages',
-      }
+        name: "markdown-pages",
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
