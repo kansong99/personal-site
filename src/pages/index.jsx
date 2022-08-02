@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" keywords={[`Kofi`, `Ansong`, `blog`, `projects`, `media`]}/>
+    <Seo title="Home" keywords={[`Kofi`, `Ansong`, `blog`, `projects`, `media`,]}/>
     <div className="index">
       {/* <div className="index__photo">
         <StaticImage

@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     mediaTitle: {
         flexGrow: 1,
         textAlign: 'center',
-        color:  '#ff840096',
+        color:  '#ff330082',
         
     },
     gridContainer: {
