@@ -4,22 +4,22 @@
       "mostRecent": "05/22",
       "description":
         "Most recent books I've read",
-      "image": "../images/beyond_sexuality.jpeg",
+      "image": "../images/wages_of_guilt.jpeg",
       "members": [
           {
-              "title": "Beyond Sexuality",
-              "author": "Tim Dean",
-              "dateCompleted": "2022-05-22" 
+              "title": "Aberrations in Black",
+              "author": "Roderick Ferguson",
+              "dateCompleted": "2022-07-27" 
           },
           {
-              "title": "The Color Purple",
-              "author": "Alice Walker",
-              "dateCompleted": "2022-05-12"
+              "title": "The Wages of Guilt",
+              "author": "Ian Buruma",
+              "dateCompleted": "2022-08-01"
           },
           {
-            "title": "The Cancer Journals",
-            "author": "Audre Lorde",
-            "dateCompleted": "2022-05-11"
+            "title": "Blindness",
+            "author": "Jose Saramago",
+            "dateCompleted": "2022-07-04"
         }
       ]
     },
@@ -28,46 +28,46 @@
         "mostRecent": "05/22",
         "description":
           "Most recent Essays I've read",
-        "image": "../images/is_the_rectum.jpeg",
+        "image": "../images/moores.jpeg",
         "members": [
             {
-                "title": "Is the Rectum a Grave",
-                "author": "Leo Bersani",
-                "dateCompleted": "2022-05-18"
+                "title": "Being Alone",
+                "author": "Ankit Shah",
+                "dateCompleted": "2022-07-15"
             },
             {
-                "title": "When Plague Ends",
-                "author": "Andrew Sullivan",
-                "dateCompleted": "2022-05-20"
+                "title": "Moore's Law for Everything",
+                "author": "Sam Altman",
+                "dateCompleted": "2022-07-16"
             },
             {
-                "title": "Aliens",
-                "author": "David Leavitt",
-                "dateCompleted": "2022-05-20"
+                "title": "Work and Pleasure",
+                "author": "Thodor Adorno",
+                "dateCompleted": "2022-07-09"
             }
         ]
       },
     {
         "medium": "Movies",
-        "mostRecent": "04/22",
+        "mostRecent": "07/22",
         "description":
           "Most recent movies I've watched",
-        "image": "../images/everything_everywhere.jpeg",
+        "image": "../images/nope.jpeg",
         "members": [
+          {
+            "title": "Nope",
+            "author": "Jordan Peele",
+            "dateCompleted": "2022-07-25" 
+        },
+        {
+            "title": "Neptune's Frost",
+            "author": "Saul & Anisia",
+            "dateCompleted": "2022-06-27"
+        },
             {
                 "title": "Everything, Everywhere, All at Once",
                 "author": "Daniels",
                 "dateCompleted": "2022-04-10" 
-            },
-            {
-                "title": "Todo sobre mi madre",
-                "author": "Pedro Almodóvar",
-                "dateCompleted": "2022-03-12"
-            },
-            {
-                "title": "Deep Water",
-                "author": "Adrian Lyne",
-                "dateCompleted": "2022-04-12"
             }
         ]
       }
