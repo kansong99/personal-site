@@ -2,7 +2,7 @@ import React from 'react';
 import makeStyles from '@mui/styles/makeStyles';
 import {Avatar, Card, CardContent, CardHeader, Typography} from '@mui/material';
 import { GatsbyImage } from "gatsby-plugin-image"
-import { amber } from '@mui/material/colors';
+
 const useStyles = makeStyles({
     root: {
         minWidth: 200,
@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         height: 300,
     },
     avatar: {
-        backgroundColor: amber[500],
+        backgroundColor: '#ff330082',
     }
 });
 

@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     projectTitle: {
         flexGrow: 1,
         textAlign: 'center',
-        color:  '#FFD700',
+        color:  '#ff330082',
         
     },
     gridContainer: {
