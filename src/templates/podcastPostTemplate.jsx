@@ -1,18 +1,16 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
-import Layout from '../layout';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
 // import UserInfo from "../components/UserInfo";
 // import Disqus from "../components/Disqus";
-import PostTags from '../components/PostTags';
-import SocialLinks from '../components/SocialLinks';
-import Seo from '../components/seo';
+import Seo from "../components/seo";
 // import Footer from "../components/Footer";
-import config from '../../data/SiteConfig';
-import Audio from '../components/audio/Audio';
-import PodcastLinks from '../components/PodcastLinks';
+import config from "../../data/siteConfig";
+// import Audio from "../components/audio/Audio";
+import PodcastLinks from "../components/podcastLinks";
 
-export default function (props) {
+function PodcastPostTemplate(props) {
   const { data, pageContext } = props;
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
@@ -29,7 +27,7 @@ export default function (props) {
   const newHtml = React.useMemo(
     () => postNode.html.replace(
       regex,
-      '<span data-nosnippet class="timestamp" onClick=window.jumpToTimestamp(`$&`)>$&</span>',
+      "<span data-nosnippet class=\"timestamp\" onClick=window.jumpToTimestamp(`$&`)>$&</span>",
     ),
     [postNode.html],
   );
@@ -44,10 +42,10 @@ export default function (props) {
             </Helmet>
             <Seo postPath={slug} postNode={postNode} postSEO />
             <div>
-              <Audio
+              {/* <Audio
                 mp3={config.s3bucket + post.audioPath}
                 episodeName={post.title}
-              />
+              /> */}
 
               <div
                 className="danger-html"
@@ -55,15 +53,15 @@ export default function (props) {
               />
 
               <div className="post-meta">
-                <PostTags tags={post.tags} />
+                {/* <PostTags tags={post.tags} /> */}
                 {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
                 <p>
                   Episodes:
-                  <Link to={`${pageContext.nextslug}`}>{'<-previous'}</Link>
+                  <Link to={`${pageContext.nextslug}`}>{"<-previous"}</Link>
                   ,
                   <Link to="/">all</Link>
                   ,
-                  <Link to={`${pageContext.prevslug}`}>{'next->'}</Link>
+                  <Link to={`${pageContext.prevslug}`}>{"next->"}</Link>
                 </p>
               </div>
               <p className="my-0">
@@ -84,6 +82,8 @@ export default function (props) {
     </Layout>
   );
 }
+
+export default PodcastPostTemplate;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

@@ -1,6 +1,8 @@
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
+const moment = require("moment");
+const siteConfig = require("./data/siteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -18,10 +20,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("src/templates/blogPostTemplate.js");
+  const blogPostTemplate = path.resolve("src/templates/blogPostTemplate.jsx");
   const tagTemplate = path.resolve("src/templates/tagTemplate.js");
   const podcastPostTemplate = path.resolve(
-    "src/template/podcastPostTemplate.jsx",
+    "src/templates/podcastPostTemplate.jsx",
   );
   const blogs = await graphql(`
     {
@@ -54,7 +56,7 @@ exports.createPages = async ({ actions, graphql }) => {
       context: { slug: node.fields.slug }, // additional data can be passed via context
     });
   });
-  const podcasts = graphql(`
+  const podcasts = await graphql(`
     {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(podcast)/" } }
@@ -84,13 +86,56 @@ exports.createPages = async ({ actions, graphql }) => {
     return Promise.reject(podcasts.errors);
   }
 
-  podcasts.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  // podcasts.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  //   createPage({
+  //     path: node.field.slug,
+  //     component: podcastPostTemplate,
+  //     context: { slug: node.fields.slug },
+  //   });
+  // });
+
+  const podcastEdges = podcasts.data.allMarkdownRemark.edges;
+
+  podcastEdges.sort((postA, postB) => {
+    const dateA = moment(
+      postA.node.frontmatter.date,
+      siteConfig.dateFromFormat,
+    );
+
+    const dateB = moment(
+      postB.node.frontmatter.date,
+      siteConfig.dateFromFormat,
+    );
+
+    if (dateA.isBefore(dateB)) return 1;
+    if (dateB.isBefore(dateA)) return -1;
+
+    return 0;
+  });
+
+  podcastEdges.forEach((edge, index) => {
+    // Create post pages
+    const nextID = index + 1 < podcastEdges.length ? index + 1 : 0;
+    const prevID = index - 1 >= 0 ? index - 1 : podcastEdges.length - 1;
+    const nextEdge = podcastEdges[nextID];
+    const prevEdge = podcastEdges[prevID];
+
     createPage({
-      path: node.field.slug,
+      path: edge.node.fields.slug,
       component: podcastPostTemplate,
-      context: { slug: node.fields.slug },
+      context: {
+        audioPath: edge.node.frontmatter.audioPath,
+        shortDescription: edge.node.frontmatter.shortDescription,
+        episodeNumber: edge.node.frontmatter.episodeNumber,
+        slug: edge.node.fields.slug,
+        nexttitle: nextEdge.node.frontmatter.title,
+        nextslug: nextEdge.node.fields.slug,
+        prevtitle: prevEdge.node.frontmatter.title,
+        prevslug: prevEdge.node.fields.slug,
+      },
     });
   });
+
   // create Tags pages
   // pulled directly from https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
   let tags = [];

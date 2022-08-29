@@ -1,6 +1,6 @@
 const path = require("path");
 const { connected } = require("process");
-const config = require("./data/SiteConfig");
+const config = require("./data/siteConfig");
 
 module.exports = {
   siteMetadata: {
@@ -89,7 +89,7 @@ module.exports = {
             }
           }
         }`,
-        setup: options => ({
+        setup: (options) => ({
           ...options,
           custom_namespaces: {
             itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
@@ -180,7 +180,7 @@ module.exports = {
           {
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
+              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
