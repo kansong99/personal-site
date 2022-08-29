@@ -5,3 +5,28 @@
 @import 'header';
 @import 'link';
 @import 'body';
+
+//==============================================================================
+// Configuration
+// - Styles that are global or utilitarian in nature
+//==============================================================================
+
+
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/utility-single';
+@import 'base/utility-multi';
+@import 'base/normalize';
+@import 'base/html-elements';
+
+
+
+
+
+
+//==============================================================================
+// Modules
+// - Specific styles to pages or components
+//==============================================================================
+@import 'modules/home';
+@import 'modules/audio';

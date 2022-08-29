@@ -1,0 +1,17 @@
+// Customizable Breakpoints
+@mixin screen-min($min) {
+    @media (min-width: $min) {
+      @content
+    }
+  };
+  @mixin screen-max($max) {
+    @media (max-width: ($max - 1)) {
+      @content
+    }
+  };
+  @mixin screen-minmax($min, $max){
+    @media (min-width: $min) and (max-width: ($max - 1)){
+      @content
+    }  
+  };
+ 
