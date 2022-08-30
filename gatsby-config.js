@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: "https://kofiansong.com/",
     rssMetadata: {
       site_url: siteUrl,
+      podcast_url: "https://kofiansong.com/podcast/",
       feed_url: "https://kofiansong.com/podcast/rss.xml",
       title: config.siteRssTitle,
       description: config.siteRssDescription,
@@ -192,8 +193,8 @@ module.exports = {
                 date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.frontmatter.description,
-                url: site.siteMetadata.rssMetadata.feed_url + edge.node.fields.slug,
-                guid: site.siteMetadata.rssMetadata.feed_url + edge.node.fields.slug,
+                url: site.siteMetadata.rssMetadata.podcast_url + edge.node.fields.slug,
+                guid: site.siteMetadata.rssMetadata.podcast_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
