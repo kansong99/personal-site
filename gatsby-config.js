@@ -67,12 +67,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-feed",
       options: {
-        setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJs Advanced Starter";
-          return ret;
-        },
         query: `
         {
           site {
@@ -91,10 +85,11 @@ module.exports = {
         }`,
         setup: (options) => ({
           ...options,
+          disable_cdata: true,
           custom_namespaces: {
             itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
           },
-          site_url: "https://kofiansong.com/",
+          site_url: "https://kofiansong.com/podcast",
           custom_elements: [
             { language: "en" },
             { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
@@ -214,6 +209,7 @@ module.exports = {
             query: `
             {
               allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/(podcast)/" } },
                 limit: 1000,
                 sort: { order: DESC, fields: [fields___date] },
               ) {
@@ -242,8 +238,8 @@ module.exports = {
               }
             }
           `,
-            output: "/rss.xml",
-            title: "The KD Pod",
+            output: config.siteRss,
+            title: config.siteRssTitle,
           },
         ],
       },
