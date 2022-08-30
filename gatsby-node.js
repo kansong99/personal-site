@@ -2,7 +2,7 @@ const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const moment = require("moment");
-const siteConfig = require("./data/siteConfig");
+const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -20,7 +20,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("src/templates/blogPostTemplate.jsx");
+  const blogPostTemplate = path.resolve(
+    "src/templates/blogPostTemplate.jsx",
+  );
   const tagTemplate = path.resolve("src/templates/tagTemplate.js");
   const podcastPostTemplate = path.resolve(
     "src/templates/podcastPostTemplate.jsx",

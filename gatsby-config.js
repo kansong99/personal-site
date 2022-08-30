@@ -1,6 +1,6 @@
 const path = require("path");
 const { connected } = require("process");
-const config = require("./data/siteConfig");
+const config = require("./data/SiteConfig");
 
 module.exports = {
   siteMetadata: {
@@ -200,9 +200,9 @@ module.exports = {
                           url:
                             config.s3bucket + edge.node.frontmatter.audioPath,
                           length:
-                            Number(edge.node.frontmatter.fileSize) *
-                            1000 *
-                            1000, // megabytes to bytes
+                            Number(edge.node.frontmatter.fileSize)
+                            * 1000
+                            * 1000, // megabytes to bytes
                           type: "audio/mpeg",
                         },
                       },

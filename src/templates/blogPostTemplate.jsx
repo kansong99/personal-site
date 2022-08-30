@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 function BlogPostTemplate({ data }) {
   const { markdownRemark } = data;
@@ -12,11 +12,11 @@ function BlogPostTemplate({ data }) {
       <Seo
         title="Home"
         keywords={[
-          'Kofi',
-          'Ansong',
-          'blog',
-          'projects',
-          'media',
+          "Kofi",
+          "Ansong",
+          "blog",
+          "projects",
+          "media",
           ...frontmatter.tags,
         ]}
       />

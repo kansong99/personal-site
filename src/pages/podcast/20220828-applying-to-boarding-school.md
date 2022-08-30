@@ -1,13 +1,13 @@
 ---
-title: "Applying to Boarding School"
-slug: "applying-to-boarding-school"
-cover: "code_chefs_podcast_art.png"
+title: 'Applying to Boarding School'
+slug: 'applying-to-boarding-school'
+cover: 'code_chefs_podcast_art.png'
 date: 2022-08-28
-audioPath: kd-ep-1-draft3.mp3
+audioPath: The_KD_Pod_001.mp3
 episodeNumber: 1
 fileSize: 20.9
 showLength: 18:36
-category: "boarding school"
+category: 'boarding school'
 shortDescription: "What were Kofi and Dolapo's experiences applying to boarding school?"
 tags:
   - boarding school

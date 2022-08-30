@@ -8,7 +8,7 @@ import GooglePodcast from "../assets/google_podcasts.svg";
 import Rss from "../assets/rss.svg";
 import Overcast from "../assets/overcast.png";
 
-function PodcastLinks(props) {
+function PodcastLinks() {
   return (
     <div className="follow-us">
       <a className="btn-social btn-spotify" target="_blank" rel="noreferrer" href="https://open.spotify.com/">

@@ -6,8 +6,8 @@ import Layout from "../components/layout";
 // import Disqus from "../components/Disqus";
 import Seo from "../components/seo";
 // import Footer from "../components/Footer";
-import config from "../../data/siteConfig";
-// import Audio from "../components/audio/Audio";
+import config from "../../data/SiteConfig";
+import Audio from "../components/audio/Audio";
 import PodcastLinks from "../components/podcastLinks";
 
 function PodcastPostTemplate(props) {
@@ -42,10 +42,10 @@ function PodcastPostTemplate(props) {
             </Helmet>
             <Seo postPath={slug} postNode={postNode} postSEO />
             <div>
-              {/* <Audio
+              <Audio
                 mp3={config.s3bucket + post.audioPath}
                 episodeName={post.title}
-              /> */}
+              />
 
               <div
                 className="danger-html"
@@ -59,7 +59,7 @@ function PodcastPostTemplate(props) {
                   Episodes:
                   <Link to={`${pageContext.nextslug}`}>{"<-previous"}</Link>
                   ,
-                  <Link to="/">all</Link>
+                  <Link to="/podcast">all</Link>
                   ,
                   <Link to={`${pageContext.prevslug}`}>{"next->"}</Link>
                 </p>

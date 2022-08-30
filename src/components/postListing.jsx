@@ -1,23 +1,7 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import makeStyles from '@mui/styles/makeStyles';
-import moment from 'moment';
-import podcastImg from '../images/kofi_dolapo_podcast_art.png';
-
-// import { Card, CardActions, CardContent, CardHeader, Typography} from '@mui/material';
-
-// import Button from '@mui/material/Button';
-// import { GatsbyImage } from "gatsby-plugin-image"
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 200,
-  },
-  media: {
-    height: 250,
-    width: 250,
-  },
-});
+import React from "react";
+import { Link } from "gatsby";
+import moment from "moment";
+import podcastImg from "../images/kofi_dolapo_podcast_art.png";
 
 function PostListing(props) {
   const getPostList = () => {
@@ -68,7 +52,7 @@ function PostListing(props) {
                     </div>
                     <div className="podcast-content-right">
                       <div className="podcast-title">{post.title}</div>
-                      <p>{moment(post.date).format('ll')}</p>
+                      <p>{moment(post.date).format("ll")}</p>
                       <p className="mt-0 short description">{post.shortDescription}</p>
                     </div>
                   </div>

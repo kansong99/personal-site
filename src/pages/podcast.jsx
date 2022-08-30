@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import PostListing from "../components/postListing";
 import Seo from "../components/seo";
-import config from "../../data/siteConfig";
+import config from "../../data/SiteConfig";
 // import Footer from "../components/Footer";
 
 function PodcastPage({ data }) {
