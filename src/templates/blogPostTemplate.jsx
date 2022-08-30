@@ -1,22 +1,22 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
-const PostTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+function BlogPostTemplate({ data }) {
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <Seo
         title="Home"
         keywords={[
-          `Kofi`,
-          `Ansong`,
-          `blog`,
-          `projects`,
-          `media`,
+          "Kofi",
+          "Ansong",
+          "blog",
+          "projects",
+          "media",
           ...frontmatter.tags,
         ]}
       />
@@ -28,10 +28,10 @@ const PostTemplate = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </section>
     </Layout>
-  )
+  );
 }
 
-export default PostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query ($slug: String!) {
@@ -44,4 +44,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

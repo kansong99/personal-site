@@ -1,0 +1,59 @@
+// Color Pallete based on https://coolors.co/0b132b-1c2541-3a506b-5bc0be-6fffe9;
+// 1 - 10
+// 10 is darkest, 1 is lightest
+$black: #1c2540;
+$blue-8: #1c2540;
+$blue-5: #394f6a;
+$blue-3: #add8e6;
+$teal-7: #5abfbd;
+$teal-5: #70ffea;
+
+// Additional Colors
+$beige-5: #f8f7e3;
+$pink-5: #f05071;
+$gray-3: #e6e6e6;
+$gray-35: #d9d9d9;
+$gray-4: #b3b3b3;
+$gray-5: #808080;
+$gray-6: #666666;
+$gray-7: #4d4d4d;
+$gray-8: #333333;
+$gray-9: #262626;
+$gray-10: #1a1a1a;
+
+// More Colors
+$dark-9: #131417;
+$dark-6: #2c303a;
+$dark-7: #1e1f26;
+$yellow-5: #FFFF01;
+$yellow-6: #EDE400;
+
+// Screen Sizes
+// $xs: 0;
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+
+// $xsmall-up: "screen and (min-width: #{$xsmall-min})";
+// $xsmall-down: "screen and (max-width: #{$xsmall-max})";
+// $small-up: "screen and (min-width: #{$small-min})";
+// $small-down: "screen and (max-width: #{$small-max})";
+// $medium-up: "screen and (min-width: #{$medium-min})";
+// $medium-down: "screen and (max-width: #{$medium-max})";
+// $large-up: "screen and (min-width: #{$large-min})";
+// $large-down: "screen and (max-width: #{$large-max})";
+// $xlarge-up: "screen and (min-width: #{$xlarge-min})";
+// $xlarge-down: "screen and (min-width: #{$xsmall-min})";
+
+// 10 = darkest
+// 1 = lightest
+$colors: (
+  "black": $black,
+  "blue-8": $blue-8,
+  "blue-5": $blue-5,
+  "teal-7": $teal-7,
+  "teal-5": $teal-5,
+);
+
+$spacer: 4px;
