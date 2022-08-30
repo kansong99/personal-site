@@ -37,7 +37,7 @@ export default function Controls({
               className={`volume-bar ${
                 index / 10 < curVolume ? "volume-bar-active" : ""
               }`}
-              key={volume.valueOf}
+              key={volume.valueOf()}
               onClick={() => setCurVolume(volume)}
             />
           ))}

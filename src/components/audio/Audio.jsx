@@ -17,7 +17,7 @@ export default function Audio({ mp3, index, episodeName }) {
     setCurTime(playerRef.current.currentTime);
   };
 
-  const setAudioTime = () => setCurTime(playerRef.current.currentTime);
+  const setAudioTime = () => setCurTime(playerRef.current?.currentTime);
 
   useEffect(() => {
     // setPlayerRef(audio)
@@ -34,8 +34,10 @@ export default function Audio({ mp3, index, episodeName }) {
 
     // effect cleanup
     return () => {
-      playerRef.current.removeEventListener("loadeddata", setAudioData);
-      playerRef.current.removeEventListener("timeupdate", setAudioTime);
+      if (playerRef.current) {
+        playerRef.current.removeEventListener("loadeddata", setAudioData);
+        playerRef.current.removeEventListener("timeupdate", setAudioTime);
+      }
     };
   }, []);
 

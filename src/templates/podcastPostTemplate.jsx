@@ -40,7 +40,7 @@ function PodcastPostTemplate(props) {
             <Helmet>
               <title>{`${post.title} | ${config.siteTitle}`}</title>
             </Helmet>
-            <Seo postPath={slug} postNode={postNode} postSEO />
+            <Seo title={post.title} postPath={slug} postNode={postNode} postSEO />
             <div>
               <Audio
                 mp3={config.s3bucket + post.audioPath}

@@ -11,7 +11,7 @@ import Overcast from "../assets/overcast.png";
 function PodcastLinks() {
   return (
     <div className="follow-us">
-      <a className="btn-social btn-spotify" target="_blank" rel="noreferrer" href="https://open.spotify.com/">
+      {/* <a className="btn-social btn-spotify" target="_blank" rel="noreferrer" href="https://open.spotify.com/">
         <img alt="spotify button" src={PodcastSpotify} />
         <span>Spotify</span>
       </a>
@@ -30,7 +30,7 @@ function PodcastLinks() {
       <a className="btn-social btn-overcasts" target="_blank" rel="noreferrer" href="https://overcast.fm/">
         <img alt="overcast button" src={Overcast} />
         <span>Overcast</span>
-      </a>
+      </a> */}
       <a className="btn-social btn-rss" target="_blank" rel="noreferrer" href="https://kofiansong.com/rss.xml">
         <img alt="rss button" src={Rss} />
         <span>RSS</span>
