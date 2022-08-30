@@ -193,8 +193,8 @@ module.exports = {
                 date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.frontmatter.description,
-                url: site.siteMetadata.rssMetadata.podcast_url + edge.node.fields.slug,
-                guid: site.siteMetadata.rssMetadata.podcast_url + edge.node.fields.slug,
+                url: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
+                guid: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
@@ -251,9 +251,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss,
+            output: "/podcast/rss.xml",
             title: config.siteRssTitle,
-            site_url: config.podcastUrl,
           },
         ],
       },
