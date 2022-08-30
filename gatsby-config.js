@@ -85,7 +85,7 @@ module.exports = {
                 title
                 description
                 image_url
-                copyrigh
+                copyright
               }
             }
           }
