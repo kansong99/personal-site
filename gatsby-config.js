@@ -164,7 +164,7 @@ module.exports = {
               "itunes:image": [
                 {
                   _attr: {
-                    href: "https://kofiansong.com/images/kofi_dolapo_art.png",
+                    href: "https://kofiansong.com/images/kofi_dolapo_podcast_art.png",
                   },
                 },
               ],
@@ -191,13 +191,13 @@ module.exports = {
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
+                description: edge.node.frontmatter.description,
                 url: site.siteMetadata.rssMetadata.podcastUrl + edge.node.fields.slug,
                 guid: site.siteMetadata.rssMetadata.podcastUrl + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
-                  { "itunes:subtitle": edge.node.excerpt },
+                  { "itunes:subtitle": edge.node.frontmatter.description },
                   { "itunes:duration": edge.node.frontmatter.showLength },
                   { "itunes:explicit": "no" },
                   {

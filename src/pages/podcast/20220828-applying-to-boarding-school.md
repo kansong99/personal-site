@@ -1,7 +1,7 @@
 ---
 title: 'Applying to Boarding School'
 slug: 'applying-to-boarding-school'
-cover: 'code_chefs_podcast_art.png'
+cover: 'kofi_dolapo_podcast_art.png'
 date: 2022-08-28
 audioPath: The_KD_Pod_001.mp3
 episodeNumber: 1
