@@ -31,7 +31,7 @@ function PodcastLinks() {
         <img alt="overcast button" src={Overcast} />
         <span>Overcast</span>
       </a> */}
-      <a className="btn-social btn-rss" target="_blank" rel="noreferrer" href="https://kofiansong.com/rss.xml">
+      <a className="btn-social btn-rss" target="_blank" rel="noreferrer" href="https://kofiansong.com/podcast/rss.xml">
         <img alt="rss button" src={Rss} />
         <span>RSS</span>
       </a>
