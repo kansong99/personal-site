@@ -5,12 +5,13 @@ const config = {
   siteTitle: 'The KD Podcast', // Site title.
   siteTitleShort: 'The KD Pod', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'The KD Podcast', // Alternative site title for SEO.
-  siteLogo: '/images/kofi_dolapo_podcast_art.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://codechefs.dev', // Domain of your website without pathPrefix.
+  siteRssLogo: '/images/kofi_dolapo_podcast_art.png', // Logo used for SEO and manifest.
+  siteUrl: 'https://kofiansong.com/', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: 'Hungry Web Developer Podcast', // Website description used for RSS feeds/meta description tag.
+  siteRssDescription: "Laugh, smile, and think with us as we discuss navigating our cultures, relationships, and young adulthood!", // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   siteRssTitle: 'The KD Pod', // Title of the RSS feed
+  podcastUrl: 'https://kofiansong.com/podcast/',
   // siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   // googleAnalyticsID: "G-08P9C1V7PY",
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.

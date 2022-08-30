@@ -1,5 +1,5 @@
 const path = require("path");
-const { connected } = require("process");
+const { siteUrl } = require("./data/SiteConfig");
 const config = require("./data/SiteConfig");
 
 module.exports = {
@@ -7,7 +7,15 @@ module.exports = {
     title: "ka",
     description: "Kofi Ansong's personal site",
     author: "Kofi Ansong",
-    siteUrl: "https://kofiansong.com//",
+    siteUrl: "https://kofiansong.com/",
+    rssMetadata: {
+      site_url: siteUrl,
+      feed_url: "https://kofiansong.com/podcast/rss.xml",
+      title: config.siteRssTitle,
+      description: config.siteRssDescription,
+      copyright: config.copyright,
+      image_url: "https://kofiansong.com/images/kofi_dolapo_podcast_art.png",
+    },
   },
   plugins: [
     "gatsby-plugin-material-ui",
@@ -71,14 +79,13 @@ module.exports = {
         {
           site {
             siteMetadata {
-              rssMetadata {
+                rssMetadata{
                 site_url
                 feed_url
                 title
                 description
                 image_url
-                copyright
-
+                copyrigh
               }
             }
           }
@@ -173,15 +180,14 @@ module.exports = {
         }),
         feeds: [
           {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
+            serialize({ query: { site, allMarkdownRemark } }) {
+              return allMarkdownRemark.edges.map((edge) => ({
                 categories: edge.node.frontmatter.tags,
-                date: edge.node.fields.date,
+                date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
+                url: site.siteMetadata.rssMetadata.podcastUrl + edge.node.fields.slug,
+                guid: site.siteMetadata.rssMetadata.podcastUrl + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },

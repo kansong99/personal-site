@@ -13,12 +13,6 @@ const useStyles = makeStyles({
     color: "#ff330082",
 
   },
-  postListContent: {
-    display: "flex",
-    flexDirection: "row",
-    padding: "1rem",
-    textAlign: "left",
-  },
 });
 
 function BlogPage({ data }) {
@@ -40,7 +34,7 @@ function BlogPage({ data }) {
                                 />
                             </Link>
                         </div> */}
-            <div className={classes.postListContent}>
+            <div>
               <h2 style={{ color: "#ff330082" }}>{post.node.frontmatter.title}</h2>
               {post.node.frontmatter.tags ? (
                 <div className="tags-container">
