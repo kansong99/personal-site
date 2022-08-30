@@ -12,6 +12,7 @@
     "gatsby": "^4.13.0",
     "gatsby-plugin-feed": "^4.21.0",
     "gatsby-plugin-gatsby-cloud": "^4.13.0",
+    "gatsby-plugin-google-analytics": "^4.21.0",
     "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-manifest": "^4.13.0",
     "gatsby-plugin-material-ui": "^4.1.0",
