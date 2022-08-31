@@ -106,7 +106,7 @@ module.exports = {
           site_url: "https://kofiansong.com/podcast",
           custom_elements: [
             { language: "en" },
-            { "itunes:author": "Kofi Ansong &amp; Dolapo Adedokun" },
+            { "itunes:author": "Kofi Ansong and Dolapo Adedokun" },
             { "itunes:explicit": "False" },
             {
               "itunes:subtitle":
