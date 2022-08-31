@@ -106,8 +106,8 @@ module.exports = {
           site_url: "https://kofiansong.com/podcast",
           custom_elements: [
             { language: "en" },
-            { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
-            { "itunes:explicit": "clean" },
+            { "itunes:author": "Kofi Ansong &amp; Dolapo Adedokun" },
+            { "itunes:explicit": "False" },
             {
               "itunes:subtitle":
                 "Two Young Black Creatives Figuring Things Out",
@@ -120,15 +120,6 @@ module.exports = {
               "itunes:owner": [
                 { "itunes:name": "Kofi Ansong" },
                 { "itunes:email": "kaansong1@gmail.com" },
-              ],
-            },
-            {
-              "itunes:category": [
-                {
-                  _attr: {
-                    text: "Fashion & Beauty",
-                  },
-                },
               ],
             },
 
@@ -155,7 +146,16 @@ module.exports = {
               "itunes:category": [
                 {
                   _attr: {
-                    text: "Society & Culture",
+                    text: "Society &amp; Culture",
+                  },
+                },
+              ],
+            },
+            {
+              "itunes:category": [
+                {
+                  _attr: {
+                    text: "Fashion &amp; Beauty",
                   },
                 },
               ],
@@ -200,7 +200,7 @@ module.exports = {
                   { "itunes:author": "Kofi Ansong & Dolapo Adedokun" },
                   { "itunes:subtitle": edge.node.frontmatter.description },
                   { "itunes:duration": edge.node.frontmatter.showLength },
-                  { "itunes:explicit": "no" },
+                  { "itunes:explicit": "False" },
                   {
                     enclosure: [
                       {
