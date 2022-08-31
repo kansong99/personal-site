@@ -165,7 +165,7 @@ module.exports = {
               "itunes:image": [
                 {
                   _attr: {
-                    href: "https://kofiansong.com/images/kofi_dolapo_podcast_art.png",
+                    href: "https://kofiansong.com/kofi_dolapo_podcast_art.png",
                   },
                 },
               ],
@@ -173,7 +173,7 @@ module.exports = {
             {
               image: [
                 {
-                  url: "https://kofiansong.com/images/kofi_dolapo_podcast_art.png",
+                  url: "https://kofiansong.com/kofi_dolapo_podcast_art.png",
                 },
                 { title: "The KD Pod" },
                 { link: "https://kofiansong.com/podcast" },
