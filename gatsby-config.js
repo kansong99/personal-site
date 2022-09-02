@@ -43,17 +43,15 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: config.googleAnalyticsID,
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        pageTransitionDelay: 0,
-        optimizeId: config.googleAnalyticsID,
-        defer: false,
-        enableWebVitalsTracking: true,
-
+        trackingIds: [config.googleAnalyticsID],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
